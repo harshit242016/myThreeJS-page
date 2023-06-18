@@ -1,56 +1,56 @@
-import React from 'react';
-import * as THREE from 'three';
+// import React from 'react';
+// import * as THREE from 'three';
 
-function MyScene() {
-  // Create a ref to attach the Three.js canvas element to
-  const canvasRef = React.useRef(null);
+// function MyScene() {
+//   // Create a ref to attach the Three.js canvas element to
+//   const canvasRef = React.useRef(null);
 
-  // Set up the Three.js scene on mount
-  React.useEffect(() => {
-    // Create a new scene
-    const scene = new THREE.Scene();
+//   // Set up the Three.js scene on mount
+//   React.useEffect(() => {
+//     // Create a new scene
+//     const scene = new THREE.Scene();
 
-    // Create a new camera
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+//     // Create a new camera
+//     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
     
-    // Create a new renderer
-    let renderer;
-    if (canvasRef && canvasRef.current) {
-      renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
-    }
+//     // Create a new renderer
+//     let renderer;
+//     if (canvasRef && canvasRef.current) {
+//       renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current });
+//     }
 
-    // Set the size of the renderer to the size of the canvas
-    renderer.setSize( window.innerWidth, window.innerHeight );
+//     // Set the size of the renderer to the size of the canvas
+//     renderer.setSize( window.innerWidth, window.innerHeight );
 
-    // Add the renderer to the DOM
-    document.body.appendChild( renderer.domElement );
+//     // Add the renderer to the DOM
+//     document.body.appendChild( renderer.domElement );
 
-    // Add a cube to the scene
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-    const cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
+//     // Add a cube to the scene
+//     const geometry = new THREE.BoxGeometry();
+//     const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+//     const cube = new THREE.Mesh( geometry, material );
+//     scene.add( cube );
 
-    // Position the camera
-    camera.position.z = 5;
+//     // Position the camera
+//     camera.position.z = 5;
 
-    // Create an animation loop
-    function animate() {
-      requestAnimationFrame( animate );
+//     // Create an animation loop
+//     function animate() {
+//       requestAnimationFrame( animate );
 
-      // Rotate the cube
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+//       // Rotate the cube
+//       cube.rotation.x += 0.01;
+//       cube.rotation.y += 0.01;
 
-      renderer.render( scene, camera );
-    }
+//       renderer.render( scene, camera );
+//     }
 
-    animate();
-  }, []);
+//     animate();
+//   }, []);
 
-  return (
-    <canvas ref={canvasRef}></canvas>
-  );
-}
+//   return (
+//     <canvas ref={canvasRef}></canvas>
+//   );
+// }
 
-export default MyScene;
+// export default MyScene;
