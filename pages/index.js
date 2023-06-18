@@ -78,15 +78,21 @@ const Home = () => (
         <Heading as="h3" variant="section-title">
           Work
         </Heading>
-        <Paragraph>
-          Harshit is a full-stack developer based in Bengaluru with a
-          passion for building digital services/stuff he wants. He has a knack
-          for all things launching products, from planning and designing all the
-          way to solving real-life problems with code. When not online, he loves
-          hanging out with his camera and bike. I love exploring new cuisines,
-          places, technologies and life.
-          My quote "Dev for Life".
-        </Paragraph>
+        <div style={{ textAlign: 'center' }}>
+          <p>
+            Harshit is a full-stack developer based in Bengaluru with a passion for
+            building digital services/apps he wants. He has a knack for all things
+            which include launching products, from planning and designing all the
+            way to solving real-life problems with code.
+          </p>
+          <p>
+            When not online, he loves hanging out with his camera and bike. He loves
+            exploring new cuisines, places, technologies, and life.
+          </p>
+          <p style={{ fontStyle: 'italic' }}>
+            His ideology: <span style={{ textDecoration: 'underline' }}>Dev for Life</span>.
+          </p>
+        </div>
       </Section>
 
       <Section delay={0.2}>
