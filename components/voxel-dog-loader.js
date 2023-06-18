@@ -27,7 +27,7 @@ export const DogContainer = forwardRef(({ children }, ref) => (
   </Box>
 ))
 
-function VoxelDogLoader(){
+const VoxelDogLoader = () => {
   return (
     <DogContainer>
       <DogSpinner />
@@ -35,4 +35,4 @@ function VoxelDogLoader(){
   )
 }
 
-export default VoxelDogLoader;
+export default VoxelDogLoader
